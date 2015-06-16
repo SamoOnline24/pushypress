@@ -8,7 +8,7 @@
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                     <article class="col-md-12 clearfix">
                         <div class="col-md-2 post-info clearfix">
-                            <?php echo get_avatar( get_the_author_email(), '50' ); ?>
+                            <?php echo get_avatar( get_the_author_meta('email'), '50' ); ?>
                             <h5 class="author"><strong>By <?php the_author(); ?></strong><br/><?php the_date('M j, Y'); ?></h5>
                             <a href="<?php comments_link(); ?>">
                                 <h5><i class="icon-comment"></i> <?php comments_number( '0', '1', '%' ); ?></h5>
